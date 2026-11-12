@@ -1,5 +1,5 @@
 ---
-title: Methods Workshop: Title TBA
+title: "Methods Workshop: Title TBA"
 category: Exploring methods TBA TBA by Alejandra
 kind: workshop
 day: 2
