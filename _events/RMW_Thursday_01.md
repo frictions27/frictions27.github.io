@@ -1,6 +1,6 @@
 ---
 title: Track A: Methods Workshop
-category: Leonardo Parra-Agudelo guides us into...
+category: Leonardo Parra-Agudelo guides us into
 kind: workshop
 day: 4
 time: "10:00–13:00"
