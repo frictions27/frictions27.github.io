@@ -1,13 +1,14 @@
 ---
-title: Track A: Methods Workshop
-category: Leonardo Parra-Agudelo guides us into
+title: Methods Workshop: Title TBA
+category: Exploring methods TBA TBA by Alejandra 
 kind: workshop
-day: 4
-time: "10:00–13:00"
-slot: 10
-length: 3
-venue: ""
-session_organizer: "Leonardo Parra-Agudelo, PhD (Universidad de Los Andes)"
+day: 2
+time: "12:00–17:00"
+slot: 12
+length: 5
+venue: "Meet: Manchester School of Architecture Entrance"
+map_url: "https://maps.app.goo.gl/aVfmfpHC2pK2RGnC6"
+session_organizer: "Alejandra"
 speakers: []
 participants: []
 respondents: []
