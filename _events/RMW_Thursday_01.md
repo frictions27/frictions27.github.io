@@ -1,6 +1,6 @@
 ---
 title: Methods Workshop: Title TBA
-category: Exploring methods TBA TBA by Alejandra 
+category: Exploring methods TBA TBA by Alejandra
 kind: workshop
 day: 2
 time: "12:00–17:00"
