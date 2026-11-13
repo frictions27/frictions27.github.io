@@ -1,6 +1,6 @@
 ---
 title: Sandeep B. Menon
-function: Landscape Architect and Academic
+function: contributor
 links:
   - label: Manchester School of Architecture profile
     url: https://www.msa.ac.uk/staff/sbalagangadharanmenon/
