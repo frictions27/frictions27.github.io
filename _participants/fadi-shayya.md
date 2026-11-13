@@ -1,6 +1,6 @@
 ---
 title: "Fadi Shayya / فادي شيا"
-function: Director, Built and Human Environments Research Centre; Lecturer in Architecture & Urbanism
+function: contributor
 links:
   - label: University of Salford profile
     url: https://www.salford.ac.uk/our-staff/fadi-shayya
