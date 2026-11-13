@@ -43,7 +43,8 @@ A short biography goes here. Markdown formatting is supported.
 Upload the photograph at the specified path. The image and links are optional;
 without an image a placeholder circle is shown. Add `function` and
 `function_es` to show the participant's role under their name, and `bio_es`
-for the Spanish biography (Markdown is supported). Each file automatically
+for the Spanish biography (Markdown is supported). Add up to three entries
+under `links`, each with a `label` and `url` (and optional `label_es`). Each file automatically
 appears on the Participants page and has its own profile page.
 
 The site displays English and Spanish together rather than using a language
