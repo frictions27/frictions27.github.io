@@ -5,14 +5,14 @@ layout: default
   <a class="back-link" href="{{ '/schedule/' | relative_url }}">← Back to schedule / <span lang="es">Volver al programa</span></a>
   <div class="event-heading">
     <div>
-      <h1>{{ page.title }}{% if page.title_es %} / <span lang="es">{{ page.title_es }}</span>{% endif %}</h1>
-      {% if page.category and page.category != empty %}<p class="event-intro">{{ page.category }}{% if page.category_es %} / <span lang="es">{{ page.category_es }}</span>{% endif %}</p>{% endif %}
+      <h1>{{ page.title }}{% if page.title_es %} / <span lang="{% if page.title_es == '[text in spanish placeholder]' %}en{% else %}es{% endif %}">{{ page.title_es }}</span>{% endif %}</h1>
+      {% if page.category and page.category != empty %}<p class="event-intro">{{ page.category }}{% if page.category_es %} / <span lang="{% if page.category_es == '[text in spanish placeholder]' %}en{% else %}es{% endif %}">{{ page.category_es }}</span>{% endif %}</p>{% endif %}
     </div>
     <div class="event-meta">
       {% assign date_index = page.day | minus: 1 %}
-      <div><span>When / <span lang="es">Cuándo</span></span><strong>{{ site.conference_dates[date_index] }} / <span lang="es">{{ site.conference_dates_es[date_index] }}</span> 2027 · {{ page.time }}</strong></div>
+      <div><span>When / <span lang="es">Cuándo</span></span><strong>{{ site.conference_dates[date_index] }} / <span lang="{% if site.conference_dates_es[date_index] == '[text in spanish placeholder]' %}en{% else %}es{% endif %}">{{ site.conference_dates_es[date_index] }}</span> 2027 · {{ page.time }}</strong></div>
       {% if page.venue and page.venue != empty %}
-      <div><span>Venue / <span lang="es">Lugar</span></span><strong>{{ page.venue }}{% if page.venue_es %} / <span lang="es">{{ page.venue_es }}</span>{% endif %}{% if page.map_url and page.map_url != empty %} <a class="map-pin" href="{{ page.map_url | escape }}" target="_blank" rel="noopener" aria-label="Open {{ page.venue | escape }} in Google Maps / Abrir en Google Maps" title="Open in Google Maps / Abrir en Google Maps">📍</a>{% endif %}</strong></div>
+      <div><span>Venue / <span lang="es">Lugar</span></span><strong>{{ page.venue }}{% if page.venue_es %} / <span lang="{% if page.venue_es == '[text in spanish placeholder]' %}en{% else %}es{% endif %}">{{ page.venue_es }}</span>{% endif %}{% if page.map_url and page.map_url != empty %} <a class="map-pin" href="{{ page.map_url | escape }}" target="_blank" rel="noopener" aria-label="Open {{ page.venue | escape }} in Google Maps / Abrir en Google Maps" title="Open in Google Maps / Abrir en Google Maps">📍</a>{% endif %}</strong></div>
       {% endif %}
       {% assign event_filename = page.path | split: '/' | last %}
       {% for reading_list in site.reading_lists %}
@@ -29,12 +29,12 @@ layout: default
       <h2>Abstract / <span lang="es">Resumen</span></h2>
       {% assign event_abstract = content | strip %}
       {% if event_abstract != empty %}{{ content }}{% else %}<p>Abstract coming soon. More information about this session will be shared as the programme develops.</p>{% endif %}
-      {% if page.abstract_es and page.abstract_es != empty %}<div lang="es">{{ page.abstract_es | markdownify }}</div>{% else %}<p lang="es">El resumen y más información sobre esta sesión se publicarán a medida que se desarrolle el programa.</p>{% endif %}
+      {% if page.abstract_es and page.abstract_es != empty %}<div lang="{% if page.abstract_es == '[text in spanish placeholder]' %}en{% else %}es{% endif %}">{{ page.abstract_es | markdownify }}</div>{% else %}<p lang="en">[text in spanish placeholder]</p>{% endif %}
       {% assign speakers = page.speakers | join: ", " %}
       {% assign participants = page.participants | join: ", " %}
       {% assign respondents = page.respondents | join: ", " %}
       <div class="details-grid">
-        {% if page.session_organizer and page.session_organizer != empty %}<div><h3>Session organizer / <span lang="es">Organización de la sesión</span></h3><p>{{ page.session_organizer }}{% if page.session_organizer_es %} / <span lang="es">{{ page.session_organizer_es }}</span>{% endif %}</p></div>{% endif %}
+        {% if page.session_organizer and page.session_organizer != empty %}<div><h3>Session organizer / <span lang="es">Organización de la sesión</span></h3><p>{{ page.session_organizer }}{% if page.session_organizer_es %} / <span lang="{% if page.session_organizer_es == '[text in spanish placeholder]' %}en{% else %}es{% endif %}">{{ page.session_organizer_es }}</span>{% endif %}</p></div>{% endif %}
         {% if speakers != empty %}<div><h3>Speaker(s) / <span lang="es">Ponentes</span></h3><p>{{ speakers }}</p></div>{% endif %}
         {% if participants != empty %}<div><h3>Participants / <span lang="es">Participantes</span></h3><p>{{ participants }}</p></div>{% endif %}
         {% if respondents != empty %}<div><h3>Respondents / <span lang="es">Comentaristas</span></h3><p>{{ respondents }}</p></div>{% endif %}

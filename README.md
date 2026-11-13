@@ -16,8 +16,7 @@ abstract as Markdown in `abstract_es`. Set `slot` to the event's start hour in 2
 (for example, `9` for 09:00 or `13` for 13:00 / 1 p.m.). The calendar shows
 10:00–19:00, so events are clipped to those visible hours. `length` is the event's
 duration in hours. Replace the conference abstract on the home page when it is
-ready. The home page currently uses linked text placeholders for supporter
-logos; replace them with approved logo files when available.
+ready. The home page supporter logos are stored in `assets/images/`.
 
 The call pages are placeholders; edit the files under `calls/` when the call
 details are ready. The landing-page background can be changed using the
@@ -30,12 +29,12 @@ To add a participant, create a Markdown file in `_participants/`, for example
 ---
 title: Jane Example
 function: Co-organizer
-function_es: Coorganizadora
+function_es: "[text in spanish placeholder]"
 image: /assets/images/jane-example.jpg
-bio_es: Una breve biografía en español.
+bio_es: "[text in spanish placeholder]"
 links:
   - label: Website
-    label_es: Sitio web
+    label_es: "[text in spanish placeholder]"
     url: https://example.com/
 ---
 A short biography goes here. Markdown formatting is supported.
@@ -50,7 +49,11 @@ appears on the Participants page and has its own profile page.
 The site displays English and Spanish together rather than using a language
 switch. Keep translations alongside the English when editing pages: call pages
 use `title_es` and `content_es`; participant and event fields are described
-above. Existing Spanish copy should be reviewed by the organizers.
+above. Spanish paragraphs are placeholders for human-written translations;
+short labels and titles remain bilingual.
+When replacing a placeholder directly in an HTML template, change its
+`lang="en"` attribute to `lang="es"`; translated `_es` fields are marked
+automatically.
 
 Reading lists are Markdown files in `_reading_lists/`. Each appears on the
 reading-lists page and can contain a bibliography as ordinary Markdown in its

@@ -10,11 +10,11 @@ permalink: /reading-lists/
       <h1>Reading lists / <span lang="es">Listas de lecturas</span></h1>
     </div>
   </div>
-  <p>Bibliographies for the symposium sessions will be collected here. / <span lang="es">Aquí se reunirán las bibliografías de las sesiones del simposio.</span></p>
+  <p>Bibliographies for the symposium sessions will be collected here. / <span lang="en">[text in spanish placeholder]</span></p>
   <div class="programme-list calls-list">
     {% assign reading_lists = site.reading_lists | sort_natural: 'title' %}
     {% for reading_list in reading_lists %}
-    <a href="{{ reading_list.url | relative_url }}">{{ reading_list.title | escape }}{% if reading_list.title_es %} / <span lang="es">{{ reading_list.title_es | escape }}</span>{% endif %}<span aria-hidden="true">↗</span></a>
+    <a href="{{ reading_list.url | relative_url }}">{{ reading_list.title | escape }}{% if reading_list.title_es %} / <span lang="{% if reading_list.title_es == '[text in spanish placeholder]' %}en{% else %}es{% endif %}">{{ reading_list.title_es | escape }}</span>{% endif %}<span aria-hidden="true">↗</span></a>
     {% endfor %}
   </div>
 </section>
