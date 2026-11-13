@@ -1,6 +1,6 @@
 ---
 title: Leonardo Parra-Agudelo
-function: co-organizer
+function: "co-organizer"
 links:
   - label: Universidad de los Andes profile
     url: https://arqdis.uniandes.edu.co/profesores/leonardo-parra/
