@@ -21,7 +21,7 @@ permalink: /schedule/
       {% assign day_date = site.conference_dates[date_index] %}
       {% assign day_date_es = site.conference_dates_es[date_index] %}
       <section class="calendar-day" aria-label="Day {{ day }}, {{ day_date }} / Día {{ day }}, {{ day_date_es }} 2027">
-        <div class="day-header"><span>DAY / <span lang="es">DÍA</span></span><strong>0{{ day }}</strong><small>{{ day_date }}<br><span lang="es">{{ day_date_es }}</span></small></div>
+        <div class="day-header"><span>DAY / <span lang="es">DÍA</span></span><strong>0{{ day }}</strong><small>{{ day_date }}<br><span lang="{% if day_date_es == '[text in spanish placeholder]' %}en{% else %}es{% endif %}">{{ day_date_es }}</span></small></div>
         <div class="day-events">
           {% for event in events %}
             {% if event.day == day %}
@@ -35,7 +35,7 @@ permalink: /schedule/
             {% assign calendar_slot = visible_start | minus: 9 %}
             {% if visible_length > 0 %}
             <a class="event-card {{ event.kind }}" style="--slot: {{ calendar_slot }}; --length: {{ visible_length }}" href="{{ event.url | relative_url }}">
-              <span>{{ event.time }}</span><strong>{{ event.title }}{% if event.title_es %}<br><span lang="es">{{ event.title_es }}</span>{% endif %}</strong><small>{{ event.category }}{% if event.category_es %}<br><span lang="es">{{ event.category_es }}</span>{% endif %}</small><span class="card-arrow" aria-hidden="true">↗</span>
+              <span>{{ event.time }}</span><strong>{{ event.title }}{% if event.title_es %}<br><span lang="{% if event.title_es == '[text in spanish placeholder]' %}en{% else %}es{% endif %}">{{ event.title_es }}</span>{% endif %}</strong><small>{{ event.category }}{% if event.category_es %}<br><span lang="{% if event.category_es == '[text in spanish placeholder]' %}en{% else %}es{% endif %}">{{ event.category_es }}</span>{% endif %}</small><span class="card-arrow" aria-hidden="true">↗</span>
             </a>
             {% endif %}
             {% endif %}
@@ -45,5 +45,5 @@ permalink: /schedule/
       {% endfor %}
     </div>
   </div>
-  <p class="calendar-note">All session times shown are indicative. Please check back for the confirmed programme. / <span lang="es">Los horarios son orientativos. Consulta esta página más adelante para ver el programa confirmado.</span></p>
+  <p class="calendar-note">All session times shown are indicative. Please check back for the confirmed programme. / <span lang="en">[text in spanish placeholder]</span></p>
 </section>

@@ -6,8 +6,8 @@ layout: default
   <div class="schedule-heading">
     <div>
       <p class="eyebrow"><span class="small-square"></span> Frictions / 1–5 March / <span lang="es">marzo</span> 2027</p>
-      <h1>{{ page.title }}{% if page.title_es %} / <span lang="es">{{ page.title_es }}</span>{% endif %}</h1>
+      <h1>{{ page.title }}{% if page.title_es %} / <span lang="{% if page.title_es == '[text in spanish placeholder]' %}en{% else %}es{% endif %}">{{ page.title_es }}</span>{% endif %}</h1>
     </div>
-    <div class="schedule-intro">{{ content }}{% if page.content_es %}<div lang="es">{{ page.content_es | markdownify }}</div>{% endif %}</div>
+    <div class="schedule-intro">{{ content }}{% if page.content_es %}<div lang="{% if page.content_es == '[text in spanish placeholder]' %}en{% else %}es{% endif %}">{{ page.content_es | markdownify }}</div>{% endif %}</div>
   </div>
 </article>

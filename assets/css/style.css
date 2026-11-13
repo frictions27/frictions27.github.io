@@ -42,9 +42,10 @@ a:focus-visible { outline: 3px solid #536e00; outline-offset: 4px; }
 .down-arrow { text-decoration: none; font-size: 40px; line-height: 1; }
 .down-arrow:hover { color: var(--diffraction-green); }
 .hero-partners { display: flex; flex-wrap: wrap; gap: 25px 45px; align-items: center; margin-bottom: 30px; }
-.hero-partners a { display: flex; align-items: center; gap: 8px; max-width: 220px; text-decoration: none; font-size: 22px; font-weight: 900; }
-.hero-partners a:hover { text-decoration: underline; }
-.hero-partners small { font-size: 10px; font-weight: 700; line-height: 1.2; text-transform: uppercase; }
+.hero-partners a { display: flex; align-items: center; }
+.hero-partners a:hover { opacity: .7; }
+.hero-partners img { display: block; width: 170px; max-width: 100%; height: 60px; object-fit: contain; }
+.hero-partners .hero-partner-mla { width: 64px; height: 64px; }
 .hero-index { padding-top: 16px; border-top: 1px solid rgba(23, 24, 21, .45); }
 
 .subtitle-echo { -webkit-text-fill-color: transparent; -webkit-text-stroke: 1.2px currentColor; }
@@ -113,11 +114,12 @@ em { font-family: Georgia, serif; font-weight: 400; }
 .calendar-scroll { overflow-x: auto; border: 1px solid var(--line); border-radius: 8px; background: #fcfcf8; }
 .calendar { display: grid; grid-template-columns: 64px repeat(5, minmax(260px, 1fr)); min-width: 1364px; }
 .calendar-day { border-left: 1px solid #e3e3da; min-width: 0; }
-.day-header { height: 78px; display: flex; align-items: center; gap: 8px; padding: 14px; border-bottom: 1px solid var(--line); }
+.day-header { height: 110px; display: flex; align-items: center; gap: 8px; padding: 14px; border-bottom: 1px solid var(--line); }
+.calendar-day .day-header { display: grid; grid-template-columns: 1fr auto; align-content: center; }
 .time-column .day-header { align-items: end; color: var(--muted); font-size: 9px; font-weight: 700; }
 .day-header span { align-self: center; color: var(--muted); font-size: 10px; font-weight: 700; }
 .day-header strong { font-size: 27px; letter-spacing: -.05em; }
-.day-header small { margin-left: auto; color: var(--muted); font-size: 10px; white-space: nowrap; }
+.day-header small { grid-column: 1 / -1; color: var(--muted); font-size: 10px; }
 .time-slots, .day-events { height: 1008px; display: grid; grid-template-rows: repeat(9, 112px); }
 .time-slots span { padding: 7px 8px; color: var(--muted); font-size: 10px; }
 .day-events { padding: 0 4px; background: repeating-linear-gradient(to bottom, transparent 0, transparent 111px, #eaeae3 111px, #eaeae3 112px); }
