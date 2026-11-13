@@ -2,7 +2,7 @@
 layout: default
 ---
 <article class="calls-page">
-  <a class="back-link" href="{{ '/participants/' | relative_url }}">← Back to participants</a>
+  <a class="back-link" href="{{ '/participants/' | relative_url }}">← Back to participants / <span lang="es">Volver a participantes</span></a>
   <div class="participant-profile">
     {% if page.image and page.image != empty %}
     <img class="participant-photo" src="{{ page.image | relative_url | escape }}" alt="">
@@ -11,12 +11,13 @@ layout: default
     {% endif %}
     <div>
       <div class="schedule-heading"><h1>{{ page.title | escape }}</h1></div>
-      <div class="participant-bio">{{ content }}</div>
+      {% if page.function and page.function != empty %}<p class="participant-function">{{ page.function | escape }}{% if page.function_es and page.function_es != empty %} / <span lang="es">{{ page.function_es | escape }}</span>{% endif %}</p>{% endif %}
+      <div class="participant-bio">{{ content }}{% if page.bio_es and page.bio_es != empty %}<div lang="es">{{ page.bio_es | markdownify }}</div>{% endif %}</div>
       {% if page.links and page.links != empty %}
-      <h2>Links</h2>
+      <h2>Links / <span lang="es">Enlaces</span></h2>
       <ul class="participant-links">
         {% for link in page.links %}
-        <li><a href="{{ link.url | escape }}">{{ link.label | escape }}</a></li>
+        <li><a href="{{ link.url | escape }}">{{ link.label | escape }}{% if link.label_es %} / <span lang="es">{{ link.label_es | escape }}</span>{% endif %}</a></li>
         {% endfor %}
       </ul>
       {% endif %}

@@ -1,0 +1,17 @@
+---
+layout: default
+---
+<article class="calls-page reading-list-page">
+  <a class="back-link" href="{{ '/reading-lists/' | relative_url }}">← Back to reading lists / <span lang="es">Volver a listas de lecturas</span></a>
+  <div class="schedule-heading">
+    <h1>{{ page.title | escape }}{% if page.title_es %} / <span lang="es">{{ page.title_es | escape }}</span>{% endif %}</h1>
+  </div>
+  {% assign reading_filename = page.path | split: '/' | last %}
+  {% for event in site.events %}
+    {% assign event_filename = event.path | split: '/' | last %}
+    {% if event_filename == reading_filename %}
+  <p><a href="{{ event.url | relative_url }}">Related event / <span lang="es">Evento relacionado</span>: {{ event.title | escape }}{% if event.title_es %} / <span lang="es">{{ event.title_es | escape }}</span>{% endif %} ↗</a></p>
+    {% endif %}
+  {% endfor %}
+  <div class="reading-list-content">{{ content }}{% if page.content_es and page.content_es != empty %}<div lang="es">{{ page.content_es | markdownify }}</div>{% endif %}</div>
+</article>

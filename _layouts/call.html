@@ -2,12 +2,12 @@
 layout: default
 ---
 <article class="calls-page">
-  <a class="back-link" href="{{ '/' | relative_url }}#calls">← Back to calls</a>
+  <a class="back-link" href="{{ '/' | relative_url }}#calls">← Back to calls / <span lang="es">Volver a convocatorias</span></a>
   <div class="schedule-heading">
     <div>
-      <p class="eyebrow"><span class="small-square"></span> Frictions / 1–5 March 2027</p>
-      <h1>{{ page.title }}</h1>
+      <p class="eyebrow"><span class="small-square"></span> Frictions / 1–5 March / <span lang="es">marzo</span> 2027</p>
+      <h1>{{ page.title }}{% if page.title_es %} / <span lang="es">{{ page.title_es }}</span>{% endif %}</h1>
     </div>
-    <div class="schedule-intro">{{ content }}</div>
+    <div class="schedule-intro">{{ content }}{% if page.content_es %}<div lang="es">{{ page.content_es | markdownify }}</div>{% endif %}</div>
   </div>
 </article>
