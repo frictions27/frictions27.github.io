@@ -1,6 +1,6 @@
 ---
 title: "Fadi Shayya / فادي شيا"
-function: contributor
+function: "contributor"
 links:
   - label: University of Salford profile
     url: https://www.salford.ac.uk/our-staff/fadi-shayya
