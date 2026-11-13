@@ -1,6 +1,7 @@
 ---
 title: Jens Haendeler
 function: "co-organizer"
+image: /assets/images/haendeler.png
 links:
   - label: Manchester School of Architecture profile
     url: https://www.msa.ac.uk/staff/jhaendeler/
