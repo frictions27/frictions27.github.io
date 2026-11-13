@@ -6,6 +6,12 @@ conference_dates:
   - Wednesday 3 March
   - Thursday 4 March
   - Friday 5 March
+conference_dates_es:
+  - lunes 1 de marzo
+  - martes 2 de marzo
+  - miércoles 3 de marzo
+  - jueves 4 de marzo
+  - viernes 5 de marzo
 collections:
   events:
     output: true
@@ -13,6 +19,9 @@ collections:
   participants:
     output: true
     permalink: /participants/:name/
+  reading_lists:
+    output: true
+    permalink: /reading-lists/:name/
 defaults:
   - scope:
       path: ""
@@ -24,3 +33,8 @@ defaults:
       type: participants
     values:
       layout: participant
+  - scope:
+      path: ""
+      type: reading_lists
+    values:
+      layout: reading-list

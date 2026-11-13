@@ -1,6 +1,8 @@
 ---
 title: Exhibition
+title_es: Exposición
 category: Exhibition
+category_es: Exposición
 kind: exhibition
 day: 5
 time: "09:00–17:00"

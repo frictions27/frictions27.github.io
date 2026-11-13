@@ -8,15 +8,16 @@
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link" href="#main">Skip to content / <span lang="es">Ir al contenido</span></a>
   <header class="site-header">
     <a class="wordmark" href="{{ '/' | relative_url }}" aria-label="Frictions, home">frictions</a>
-    <span class="header-edition">A symposium<br>1–5 March 2027</span>
-    <nav aria-label="Main navigation">
-      <a href="{{ '/' | relative_url }}#about">About</a>
-      <a href="{{ '/schedule/' | relative_url }}"{% if page.url == '/schedule/' %} aria-current="page"{% endif %}>Schedule <span aria-hidden="true">↗</span></a>
-      <a href="{{ '/' | relative_url }}#calls"{% if page.url contains '/calls/' %} aria-current="page"{% endif %}>Calls</a>
-      <a href="{{ '/participants/' | relative_url }}"{% if page.url contains '/participants/' %} aria-current="page"{% endif %}>Participants</a>
+    <span class="header-edition">1–5 March / <span lang="es">marzo</span> 2027</span>
+    <nav aria-label="Main navigation / Navegación principal">
+      <a href="{{ '/' | relative_url }}#about">About / <span lang="es">Acerca de</span></a>
+      <a href="{{ '/schedule/' | relative_url }}"{% if page.url == '/schedule/' %} aria-current="page"{% endif %}>Schedule / <span lang="es">Programa</span></a>
+      <a href="{{ '/' | relative_url }}#calls"{% if page.url contains '/calls/' %} aria-current="page"{% endif %}>Calls / <span lang="es">Convocatorias</span></a>
+      <a href="{{ '/participants/' | relative_url }}"{% if page.url contains '/participants/' %} aria-current="page"{% endif %}>Participants / <span lang="es">Participantes</span></a>
+      <a href="{{ '/reading-lists/' | relative_url }}"{% if page.url contains '/reading-lists/' %} aria-current="page"{% endif %}>Reading lists / <span lang="es">Lecturas</span></a>
     </nav>
   </header>
   <main id="main">
@@ -24,9 +25,9 @@
   </main>
   <footer class="site-footer">
     <a class="footer-logo" href="{{ '/' | relative_url }}">frictions</a>
-    <p>Science-Making at the Intersections of<br>Art, Ecology and Architecture</p>
-    <p>2027 Symposium<br><span>1–5 March 2027</span></p>
-    <a href="#main">Back to top ↑</a>
+    <p>Science-Making at the Intersections of<br>Art, Ecology and Architecture<br><span lang="es">La producción de ciencia en las intersecciones entre arte, ecología y arquitectura</span></p>
+    <p>2027 Symposium / <span lang="es">Simposio 2027</span><br><span>1–5 March / <span lang="es">marzo</span> 2027</span></p>
+    <a href="#main">Back to top / <span lang="es">Volver arriba</span> ↑</a>
   </footer>
 </body>
 </html>
