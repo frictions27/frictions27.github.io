@@ -1,6 +1,6 @@
 ---
 title: Mingyu Jiang
-function: contributor
+function: "contributor"
 links:
   - label: Manchester School of Architecture profile
     url: https://www.msa.ac.uk/staff/mjiang/
