@@ -1,6 +1,6 @@
 ---
 title: Jens Haendeler
-function: Lecturer, Manchester School of Architecture
+function: co-organizer
 links:
   - label: Manchester School of Architecture profile
     url: https://www.msa.ac.uk/staff/jhaendeler/
