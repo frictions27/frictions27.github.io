@@ -1,6 +1,6 @@
 ---
 title: Mingyu Jiang
-function: Lecturer in Landscape Architecture, Manchester School of Architecture
+function: contributor
 links:
   - label: Manchester School of Architecture profile
     url: https://www.msa.ac.uk/staff/mjiang/
