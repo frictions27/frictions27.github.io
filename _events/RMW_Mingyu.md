@@ -4,7 +4,7 @@ title_es: "Taller de métodos: título por confirmar"
 category: Mingyu Jiang (Manchester School of Architecture) leads a research methods workshop on (TBA)
 category_es: Exploración de métodos por confirmar, a cargo de Mingyu
 kind: workshop
-day: 3
+day: 4
 time: "10:00–13:00"
 slot: 10
 length: 3
