@@ -5,9 +5,9 @@ category: Lecture by TBA
 category_es: Lecture
 kind: lecture
 day: 3
-time: "17:00–18:30"
+time: "17:00–19:00"
 slot: 17
-length: 1.5
+length: 2
 venue: ""
 session_organizer: ""
 speakers: []
