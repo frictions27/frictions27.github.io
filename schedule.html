@@ -24,18 +24,20 @@ permalink: /schedule/
         {% assign max_concurrent_events = 1 %}
         {% for candidate_event in events %}
           {% if candidate_event.day == day %}
-            {% assign candidate_start = candidate_event.slot | plus: 0 %}
-            {% assign candidate_end = candidate_start | plus: candidate_event.length %}
-            {% if candidate_start < 10 %}{% assign candidate_start = 10 %}{% endif %}
-            {% if candidate_end > 19 %}{% assign candidate_end = 19 %}{% endif %}
+            {% assign candidate_start = candidate_event.slot | plus: 0 | times: 2 | round %}
+            {% assign candidate_length = candidate_event.length | plus: 0 | times: 2 | round %}
+            {% assign candidate_end = candidate_start | plus: candidate_length %}
+            {% if candidate_start < 20 %}{% assign candidate_start = 20 %}{% endif %}
+            {% if candidate_end > 38 %}{% assign candidate_end = 38 %}{% endif %}
             {% if candidate_start < candidate_end %}
               {% assign concurrent_events = 0 %}
               {% for other_event in events %}
                 {% if other_event.day == day %}
-                  {% assign other_start = other_event.slot | plus: 0 %}
-                  {% assign other_end = other_start | plus: other_event.length %}
-                  {% if other_start < 10 %}{% assign other_start = 10 %}{% endif %}
-                  {% if other_end > 19 %}{% assign other_end = 19 %}{% endif %}
+                  {% assign other_start = other_event.slot | plus: 0 | times: 2 | round %}
+                  {% assign other_length = other_event.length | plus: 0 | times: 2 | round %}
+                  {% assign other_end = other_start | plus: other_length %}
+                  {% if other_start < 20 %}{% assign other_start = 20 %}{% endif %}
+                  {% if other_end > 38 %}{% assign other_end = 38 %}{% endif %}
                   {% if other_start <= candidate_start and candidate_start < other_end %}
                     {% assign concurrent_events = concurrent_events | plus: 1 %}
                   {% endif %}
@@ -51,22 +53,24 @@ permalink: /schedule/
           <div class="hour-lines" aria-hidden="true">{% for hour in (1..9) %}<span></span>{% endfor %}</div>
           {% for event in events %}
             {% if event.day == day %}
-            {% assign event_start = event.slot | plus: 0 %}
-            {% assign event_end = event_start | plus: event.length %}
+            {% assign event_start = event.slot | plus: 0 | times: 2 | round %}
+            {% assign event_length = event.length | plus: 0 | times: 2 | round %}
+            {% assign event_end = event_start | plus: event_length %}
             {% assign visible_start = event_start %}
-            {% if visible_start < 10 %}{% assign visible_start = 10 %}{% endif %}
+            {% if visible_start < 20 %}{% assign visible_start = 20 %}{% endif %}
             {% assign visible_end = event_end %}
-            {% if visible_end > 19 %}{% assign visible_end = 19 %}{% endif %}
+            {% if visible_end > 38 %}{% assign visible_end = 38 %}{% endif %}
             {% assign visible_length = visible_end | minus: visible_start %}
-            {% assign calendar_slot = visible_start | minus: 9 %}
+            {% assign calendar_slot = visible_start | minus: 19 %}
             {% assign has_overlap = false %}
             {% if visible_length > 0 %}
               {% for other_event in events %}
                 {% if other_event.day == day and other_event.url != event.url %}
-                  {% assign other_start = other_event.slot | plus: 0 %}
-                  {% assign other_end = other_start | plus: other_event.length %}
-                  {% if other_start < 10 %}{% assign other_start = 10 %}{% endif %}
-                  {% if other_end > 19 %}{% assign other_end = 19 %}{% endif %}
+                  {% assign other_start = other_event.slot | plus: 0 | times: 2 | round %}
+                  {% assign other_length = other_event.length | plus: 0 | times: 2 | round %}
+                  {% assign other_end = other_start | plus: other_length %}
+                  {% if other_start < 20 %}{% assign other_start = 20 %}{% endif %}
+                  {% if other_end > 38 %}{% assign other_end = 38 %}{% endif %}
                   {% if other_start < visible_end and visible_start < other_end %}
                     {% assign has_overlap = true %}
                   {% endif %}
