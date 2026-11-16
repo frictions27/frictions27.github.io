@@ -121,12 +121,13 @@ em { font-family: Georgia, serif; font-weight: 400; }
 .day-header span { align-self: center; color: var(--muted); font-size: 10px; font-weight: 700; }
 .day-header strong { font-size: 27px; letter-spacing: -.05em; }
 .day-header small { grid-column: 1 / -1; color: var(--muted); font-size: 10px; }
-.time-slots, .day-events { --calendar-rows: repeat(3, 112px) 37.3333px repeat(2, 112px) 37.3333px repeat(2, 112px); height: 858.6666px; display: grid; grid-template-rows: var(--calendar-rows); }
+.time-slots, .day-events { --calendar-rows: repeat(3, 100.8px) 33.6px repeat(2, 100.8px) 33.6px repeat(2, 100.8px); height: 772.8px; display: grid; grid-template-rows: var(--calendar-rows); }
 .time-slots span { padding: 7px 8px; color: var(--muted); font-size: 10px; }
-.day-events { position: relative; padding: 0 4px; }
+.day-events { position: relative; grid-template-columns: repeat(2, minmax(0, 1fr)); padding: 0 4px; }
 .hour-lines { position: absolute; inset: 0 4px; display: grid; grid-template-rows: var(--calendar-rows); pointer-events: none; }
 .hour-lines span { border-bottom: 1px solid #eaeae3; }
 .event-card { position: relative; grid-row: var(--slot) / span var(--length); display: flex; flex-direction: column; gap: 6px; min-height: 0; margin: 4px 0; padding: 10px; border-left: 3px solid; border-radius: 4px; text-decoration: none; overflow: hidden; }
+.event-card.wide { grid-column: 1 / -1; }
 .event-card:hover { filter: brightness(.95); }
 .event-card.workshop { background: #e2edce; border-color: var(--diffraction-green); }
 .event-card.seminar { background: #f6e2eb; border-color: var(--diffraction-pink); }
