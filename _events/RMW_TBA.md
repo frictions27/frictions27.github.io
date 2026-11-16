@@ -1,13 +1,13 @@
 ---
-title: Methods Workshop 04
-title_es: Taller de métodos 04
+title: Methods Workshop TBA
+title_es: Taller de métodos TBA
 category: Methods Workshops
 category_es: Talleres de métodos
 kind: workshop
 day: 4
-time: "09:00–11:00"
-slot: 9
-length: 2
+time: "10:00–13:00"
+slot: 10
+length: 3
 venue: ""
 session_organizer: ""
 speakers: []
