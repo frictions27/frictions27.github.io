@@ -1,12 +1,12 @@
 ---
-title: Panel / Lecture 02
-title_es: Mesa redonda / conferencia 02
+title: "Seminar: the social study of science"
+title_es: Mesa redonda / conferencia
 category: Panels and Lectures
 category_es: Mesas redondas y conferencias
-kind: panel
+kind: seminar
 day: 3
-time: "15:00–17:00"
-slot: 15
+time: "14:00–16:00"
+slot: 14
 length: 2
 venue: ""
 session_organizer: ""
