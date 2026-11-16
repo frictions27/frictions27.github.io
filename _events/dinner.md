@@ -4,7 +4,7 @@ title_es: Cena comunitaria
 short_description: Collective Dinner for Participants
 short_description_es: Cena colectiva para participantes
 kind: dinner
-day: 1
+day: 3
 time: "18:00–20:00"
 slot: 18
 length: 1
