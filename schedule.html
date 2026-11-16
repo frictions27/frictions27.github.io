@@ -5,23 +5,22 @@ permalink: /schedule/
 ---
 <section class="schedule-page">
   <div class="calendar-bar">
-    <div><span class="calendar-kicker">FRICTIONS 2027</span><h2>Schedule [draft] / <span lang="es">Programa [borrador]</span></h2></div>
-    <p class="eyebrow">Monday, March 1 to Friday, March 5 2027 / <span lang="es">Del lunes 1 al viernes 5 de marzo de 2027</span></p>
+    <div><span class="calendar-kicker">FRICTIONS 2027</span><h2>Schedule [draft]</h2></div>
+    <p class="eyebrow">Monday, March 1 to Friday, March 5 2027</p>
   </div>
-  <p class="scroll-hint">Scroll sideways to see all five days / <span lang="es">Desplázate horizontalmente para ver los cinco días</span> →</p>
-  <div class="calendar-scroll" role="region" aria-label="Five-day schedule; scroll horizontally to see all days / Programa de cinco días; desplázate horizontalmente para verlos" tabindex="0">
+  <p class="scroll-hint">Scroll sideways to see all five days →</p>
+  <div class="calendar-scroll" role="region" aria-label="Five-day schedule; scroll horizontally to see all days" tabindex="0">
     <div class="calendar">
       <div class="time-column" aria-hidden="true">
-        <div class="day-header">TIME / <span lang="es">HORA</span></div>
+        <div class="day-header">TIME</div>
         <div class="time-slots"><span>10:00</span><span>11:00</span><span>12:00</span><span>13:00</span><span>14:00</span><span>15:00</span><span>16:00</span><span>17:00</span><span>18:00</span></div>
       </div>
       {% assign events = site.events | sort: 'slot' %}
       {% for day in (1..5) %}
       {% assign date_index = day | minus: 1 %}
       {% assign day_date = site.conference_dates[date_index] %}
-      {% assign day_date_es = site.conference_dates_es[date_index] %}
-      <section class="calendar-day" aria-label="Day {{ day }}, {{ day_date }} / Día {{ day }}, {{ day_date_es }} 2027">
-        <div class="day-header"><span>DAY / <span lang="es">DÍA</span></span><strong>0{{ day }}</strong><small>{{ day_date }}<br><span lang="{% if day_date_es == '[text in spanish placeholder]' %}en{% else %}es{% endif %}">{{ day_date_es }}</span></small></div>
+      <section class="calendar-day" aria-label="Day {{ day }}, {{ day_date }} 2027">
+        <div class="day-header"><span>DAY</span><strong>0{{ day }}</strong><small>{{ day_date }}</small></div>
         <div class="day-events">
           {% for event in events %}
             {% if event.day == day %}
@@ -35,7 +34,7 @@ permalink: /schedule/
             {% assign calendar_slot = visible_start | minus: 9 %}
             {% if visible_length > 0 %}
             <a class="event-card {{ event.kind }}" style="--slot: {{ calendar_slot }}; --length: {{ visible_length }}" href="{{ event.url | relative_url }}">
-              <span>{{ event.time }}</span><strong>{{ event.title }}{% if event.title_es %}<br><span lang="{% if event.title_es == '[text in spanish placeholder]' %}en{% else %}es{% endif %}">{{ event.title_es }}</span>{% endif %}</strong><small>{{ event.category }}{% if event.category_es %}<br><span lang="{% if event.category_es == '[text in spanish placeholder]' %}en{% else %}es{% endif %}">{{ event.category_es }}</span>{% endif %}</small><span class="card-arrow" aria-hidden="true">↗</span>
+              <span>{{ event.time }}</span><small>{{ event.category }}</small><strong>{{ event.title }}</strong><span class="card-arrow" aria-hidden="true">↗</span>
             </a>
             {% endif %}
             {% endif %}
@@ -45,5 +44,5 @@ permalink: /schedule/
       {% endfor %}
     </div>
   </div>
-  <p class="calendar-note">All session times shown are indicative. Please check back for the confirmed programme. / <span lang="en">[text in spanish placeholder]</span></p>
+  <p class="calendar-note">All session times shown are indicative. Please check back for the confirmed programme.</p>
 </section>
