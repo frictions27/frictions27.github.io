@@ -1,15 +1,15 @@
 ---
-title: Exhibition
-title_es: Exposición
-category: Exhibition
-category_es: Exposición
-kind: exhibition
+title: Frictions X &-Atelier Exhibition
+title_es: Frictions X &-Atelier Exposición
+category: Exhibition with the &-Atelier
+category_es: Exposición en & de
+kind: other
 day: 5
-time: "09:00–17:00"
-slot: 9
-length: 8
-venue: ""
-session_organizer: ""
+time: "10:00–13:00"
+slot: 10
+length: 3
+venue: "MTC"
+session_organizer: "Professor Stefan White, and Jens Haendeler"
 speakers: []
 participants: []
 respondents: []
