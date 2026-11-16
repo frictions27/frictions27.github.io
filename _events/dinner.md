@@ -4,8 +4,8 @@ title_es: Cena comunitaria
 short_description: Collective Dinner for Participants
 short_description_es: Cena colectiva para participantes
 kind: dinner
-day: 3
-time: "18:00–20:00"
+day: 2
+time: "17:00–20:00"
 slot: 18
 length: 1
 venue: "Meet: TBA"
