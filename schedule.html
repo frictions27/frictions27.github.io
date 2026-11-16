@@ -19,9 +19,25 @@ permalink: /schedule/
       {% for day in (1..5) %}
       {% assign date_index = day | minus: 1 %}
       {% assign day_date = site.conference_dates[date_index] %}
+      {% assign day_columns = 1 %}
+      {% for hour in (10..18) %}
+        {% assign active_events = 0 %}
+        {% for counted_event in events %}
+          {% if counted_event.day == day %}
+            {% assign counted_start = counted_event.slot | plus: 0 %}
+            {% assign counted_end = counted_start | plus: counted_event.length %}
+            {% if counted_start < 10 %}{% assign counted_start = 10 %}{% endif %}
+            {% if counted_end > 19 %}{% assign counted_end = 19 %}{% endif %}
+            {% if counted_start <= hour and counted_end > hour %}
+              {% assign active_events = active_events | plus: 1 %}
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+        {% if active_events > day_columns %}{% assign day_columns = active_events %}{% endif %}
+      {% endfor %}
       <section class="calendar-day" aria-label="Day {{ day }}, {{ day_date }} 2027">
         <div class="day-header"><span>DAY</span><strong>0{{ day }}</strong><small>{{ day_date }}</small></div>
-        <div class="day-events">
+        <div class="day-events" style="--columns: {{ day_columns }}">
           <div class="hour-lines" aria-hidden="true">{% for hour in (1..9) %}<span></span>{% endfor %}</div>
           {% for event in events %}
             {% if event.day == day %}
@@ -33,8 +49,20 @@ permalink: /schedule/
             {% if visible_end > 19 %}{% assign visible_end = 19 %}{% endif %}
             {% assign visible_length = visible_end | minus: visible_start %}
             {% assign calendar_slot = visible_start | minus: 9 %}
+            {% assign event_has_overlap = false %}
+            {% for other_event in events %}
+              {% if other_event.day == day and other_event.path != event.path %}
+                {% assign other_start = other_event.slot | plus: 0 %}
+                {% assign other_end = other_start | plus: other_event.length %}
+                {% if other_start < 10 %}{% assign other_start = 10 %}{% endif %}
+                {% if other_end > 19 %}{% assign other_end = 19 %}{% endif %}
+                {% if other_start < visible_end and other_end > visible_start and other_end > other_start %}
+                  {% assign event_has_overlap = true %}
+                {% endif %}
+              {% endif %}
+            {% endfor %}
             {% if visible_length > 0 %}
-            <a class="event-card {{ event.kind }}" style="--slot: {{ calendar_slot }}; --length: {{ visible_length }}" href="{{ event.url | relative_url }}">
+            <a class="event-card {{ event.kind }}{% if event_start >= 14 and event_has_overlap == false %} event-card--full-width{% endif %}" style="--slot: {{ calendar_slot }}; --length: {{ visible_length }}" href="{{ event.url | relative_url }}">
               <span>{{ event.time }}</span><small>{{ event.kind }}</small><strong>{{ event.title }}</strong><small>{{ event.category }}</small><span class="card-arrow" aria-hidden="true">↗</span>
             </a>
             {% endif %}

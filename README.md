@@ -15,8 +15,11 @@ applicable; write the English abstract in the Markdown body and the Spanish
 abstract as Markdown in `abstract_es`. Set `slot` to the event's start hour in 24-hour time
 (for example, `9` for 09:00 or `13` for 13:00 / 1 p.m.). The calendar shows
 10:00–19:00, so events are clipped to those visible hours. `length` is the event's
-duration in hours. Replace the conference abstract on the home page when it is
-ready. The home page supporter logos are stored in `assets/images/`.
+duration in hours. Events starting at or after 14:00 fill the day column when
+they do not overlap another event within the visible schedule; overlapping
+events keep their side-by-side layout. Replace the conference abstract on the
+home page when it is ready. The home page supporter logos are stored in
+`assets/images/`.
 
 The call pages are placeholders; edit the files under `calls/` when the call
 details are ready. The landing-page background can be changed using the
