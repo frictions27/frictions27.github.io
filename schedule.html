@@ -21,7 +21,33 @@ permalink: /schedule/
       {% assign day_date = site.conference_dates[date_index] %}
       <section class="calendar-day" aria-label="Day {{ day }}, {{ day_date }} 2027">
         <div class="day-header"><span>DAY</span><strong>0{{ day }}</strong><small>{{ day_date }}</small></div>
-        <div class="day-events">
+        {% assign max_concurrent_events = 1 %}
+        {% for candidate_event in events %}
+          {% if candidate_event.day == day %}
+            {% assign candidate_start = candidate_event.slot | plus: 0 %}
+            {% assign candidate_end = candidate_start | plus: candidate_event.length %}
+            {% if candidate_start < 10 %}{% assign candidate_start = 10 %}{% endif %}
+            {% if candidate_end > 19 %}{% assign candidate_end = 19 %}{% endif %}
+            {% if candidate_start < candidate_end %}
+              {% assign concurrent_events = 0 %}
+              {% for other_event in events %}
+                {% if other_event.day == day %}
+                  {% assign other_start = other_event.slot | plus: 0 %}
+                  {% assign other_end = other_start | plus: other_event.length %}
+                  {% if other_start < 10 %}{% assign other_start = 10 %}{% endif %}
+                  {% if other_end > 19 %}{% assign other_end = 19 %}{% endif %}
+                  {% if other_start <= candidate_start and candidate_start < other_end %}
+                    {% assign concurrent_events = concurrent_events | plus: 1 %}
+                  {% endif %}
+                {% endif %}
+              {% endfor %}
+              {% if concurrent_events > max_concurrent_events %}
+                {% assign max_concurrent_events = concurrent_events %}
+              {% endif %}
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+        <div class="day-events" style="--event-columns: {{ max_concurrent_events }}">
           <div class="hour-lines" aria-hidden="true">{% for hour in (1..9) %}<span></span>{% endfor %}</div>
           {% for event in events %}
             {% if event.day == day %}
