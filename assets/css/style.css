@@ -128,8 +128,6 @@ em { font-family: Georgia, serif; font-weight: 400; }
 .hour-lines span { border-bottom: 1px solid #eaeae3; }
 .event-card { position: relative; grid-row: var(--slot) / span var(--length); display: flex; flex-direction: column; gap: 6px; min-height: 0; margin: 4px 0; padding: 10px; border-left: 3px solid; border-radius: 4px; text-decoration: none; overflow: hidden; }
 .event-card.wide { grid-column: 1 / -1; }
-.event-card.overlapping { transition: transform 160ms ease; transform-origin: center; }
-.event-card.overlapping:hover, .event-card.overlapping:focus-visible, .event-card.overlapping:active { z-index: 2; transform: scaleX(1.16); }
 .event-card:hover { filter: brightness(.95); }
 .event-card.workshop { background: #e2edce; border-color: var(--diffraction-green); }
 .event-card.seminar { background: #f6e2eb; border-color: var(--diffraction-pink); }
@@ -193,6 +191,5 @@ em { font-family: Georgia, serif; font-weight: 400; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .event-card.overlapping { transition: none; }
 }
 .map-pin { margin-left: 6px; text-decoration: none; }
