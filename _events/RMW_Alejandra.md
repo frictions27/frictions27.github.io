@@ -11,7 +11,7 @@ length: 3
 venue: "Meet: Manchester School of Architecture"
 venue_es: "Punto de encuentro: entrada de la Manchester School of Architecture"
 map_url: "https://maps.app.goo.gl/aVfmfpHC2pK2RGnC6"
-session_organizer: "Alejandra"
+session_organizer: "Alejandra Ascencio (Universidad de Los Andes)"
 speakers: []
 participants: []
 respondents: []
