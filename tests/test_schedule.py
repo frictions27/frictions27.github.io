@@ -62,7 +62,8 @@ class FractionalScheduleDurationTest(unittest.TestCase):
         self.assertIn("--event-columns: 2", schedule)
         self.assertIn("--slot: 3; --length: 3", schedule)
         self.assertIn("--slot: 5; --length: 2", schedule)
-        self.assertEqual(schedule.count("overlapping\">"), 2)
+        self.assertIn('class="event-card panel overlapping"', schedule)
+        self.assertIn('class="event-card seminar overlapping"', schedule)
 
 
 if __name__ == "__main__":
