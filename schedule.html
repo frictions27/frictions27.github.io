@@ -34,7 +34,7 @@ permalink: /schedule/
             {% assign calendar_slot = visible_start | minus: 9 %}
             {% if visible_length > 0 %}
             <a class="event-card {{ event.kind }}" style="--slot: {{ calendar_slot }}; --length: {{ visible_length }}" href="{{ event.url | relative_url }}">
-              <span>{{ event.time }}</span><small>{{ event.category }}</small><strong>{{ event.title }}</strong><span class="card-arrow" aria-hidden="true">↗</span>
+              <span>{{ event.time }}</span><small>{{ event.kind }}</small><strong>{{ event.title }}</strong><small>{{ event.category }}</small><span class="card-arrow" aria-hidden="true">↗</span>
             </a>
             {% endif %}
             {% endif %}
