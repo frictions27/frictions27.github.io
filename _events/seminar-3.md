@@ -1,13 +1,13 @@
 ---
-title: Seminar 03
-title_es: Seminario 03
-category: Seminars
-category_es: Seminarios
-kind: seminar
+title: Lecture
+title_es: lectura
+category: Lecture by Purva Dewoolkar
+category_es: Lecture
+kind: lecture
 day: 3
-time: "13:00–15:00"
-slot: 13
-length: 2
+time: "17:00–18:00"
+slot: 17
+length: 1
 venue: ""
 session_organizer: ""
 speakers: []
