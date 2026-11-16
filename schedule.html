@@ -33,8 +33,22 @@ permalink: /schedule/
             {% if visible_end > 19 %}{% assign visible_end = 19 %}{% endif %}
             {% assign visible_length = visible_end | minus: visible_start %}
             {% assign calendar_slot = visible_start | minus: 9 %}
+            {% assign has_overlap = false %}
             {% if visible_length > 0 %}
-            <a class="event-card {{ event.kind }}" style="--slot: {{ calendar_slot }}; --length: {{ visible_length }}" href="{{ event.url | relative_url }}">
+              {% for other_event in events %}
+                {% if other_event.day == day and other_event.url != event.url %}
+                  {% assign other_start = other_event.slot | plus: 0 %}
+                  {% assign other_end = other_start | plus: other_event.length %}
+                  {% if other_start < 10 %}{% assign other_start = 10 %}{% endif %}
+                  {% if other_end > 19 %}{% assign other_end = 19 %}{% endif %}
+                  {% if other_start < visible_end and visible_start < other_end %}
+                    {% assign has_overlap = true %}
+                  {% endif %}
+                {% endif %}
+              {% endfor %}
+            {% endif %}
+            {% if visible_length > 0 %}
+            <a class="event-card {{ event.kind }}{% unless has_overlap %} wide{% endunless %}" style="--slot: {{ calendar_slot }}; --length: {{ visible_length }}" href="{{ event.url | relative_url }}">
               <span>{{ event.time }}</span><small>{{ event.kind }}</small><strong>{{ event.title }}</strong><small>{{ event.category }}</small><span class="card-arrow" aria-hidden="true">↗</span>
             </a>
             {% endif %}
