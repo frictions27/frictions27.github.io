@@ -74,8 +74,17 @@ permalink: /schedule/
               {% endfor %}
             {% endif %}
             {% if visible_length > 0 %}
+            {% assign card_details = event.session_organizer | default: "" %}
+            {% assign card_speakers = event.speakers | join: ", " %}
+            {% assign card_participants = event.participants | join: ", " %}
+            {% assign card_respondents = event.respondents | join: ", " %}
+            {% if card_speakers != empty %}{% if card_details != empty %}{% assign card_details = card_details | append: ", " %}{% endif %}{% assign card_details = card_details | append: card_speakers %}{% endif %}
+            {% if card_participants != empty %}{% if card_details != empty %}{% assign card_details = card_details | append: ", " %}{% endif %}{% assign card_details = card_details | append: card_participants %}{% endif %}
+            {% if card_respondents != empty %}{% if card_details != empty %}{% assign card_details = card_details | append: ", " %}{% endif %}{% assign card_details = card_details | append: card_respondents %}{% endif %}
             <a class="event-card {{ event.kind }}{% if has_overlap %} overlapping{% else %} wide{% endif %}" style="--slot: {{ calendar_slot }}; --length: {{ visible_length }}" href="{{ event.url | relative_url }}">
-              <span>{{ event.time }}</span><small>{{ event.kind }}</small><strong>{{ event.title }}</strong><small>{{ event.category }}</small><span class="card-arrow" aria-hidden="true">↗</span>
+              <strong class="card-time">{{ event.time }}</strong><strong class="card-kind">{{ event.kind }}</strong><strong>{{ event.title }}</strong>
+              {% if card_details != empty %}<span class="card-details">{{ card_details }}</span>{% endif %}
+              <small>{{ event.category }}</small><span class="card-arrow" aria-hidden="true">↗</span>
             </a>
             {% endif %}
             {% endif %}
