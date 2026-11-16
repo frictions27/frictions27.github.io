@@ -3,7 +3,7 @@ title: Frictions X &-Atelier Exhibition
 title_es: Frictions X &-Atelier Exposición
 category: Exhibition with the &-Atelier
 category_es: Exposición en & de
-kind: other
+kind: exhibition
 day: 5
 time: "10:00–13:00"
 slot: 10
