@@ -1,7 +1,7 @@
 ---
 title: Lecture
 title_es: lectura
-category: Lecture by Purva Dewoolkar
+category: Lecture by TBA
 category_es: Lecture
 kind: lecture
 day: 3
