@@ -131,7 +131,7 @@ em { font-family: Georgia, serif; font-weight: 400; }
 .event-card.panel { background: #f5dfdd; border-color: var(--diffraction-red); }
 .event-card.lecture { background: #eee8ff; border-color: var(--diffraction-violet); }
 .event-card.exhibition { background: rgba(190, 190, 190, .35); border-color: var(--diffraction-green); }
-.event-card.dinner { background: rgba(190, 190, 190, .35); }
+.event-card.dinner, .event-card.lunch { background: rgba(190, 190, 190, .35); }
 .event-card > span:first-child, .event-card small { font-size: 10px; line-height: 1.2; }
 .event-card strong { font-size: 14px; line-height: 1.2; letter-spacing: -.02em; }
 .event-card strong [lang="es"] { color: var(--ink); -webkit-text-fill-color: transparent; -webkit-text-stroke: .7px currentColor; }
