@@ -6,8 +6,8 @@ short_description_es: Cena colectiva para participantes
 kind: dinner
 day: 2
 time: "17:00–20:00"
-slot: 18
-length: 1
+slot: 17
+length: 2
 venue: "Meet: TBA"
 venue_es: "Punto de encuentro: por confirmar"
 map_url: ""
