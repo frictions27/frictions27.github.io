@@ -1,14 +1,14 @@
 ---
-title: "Methods Workshop: Title TBA"
+title: "Statistics and Speculative Imagination (title TBA)"
 title_es: "Taller de métodos: título por confirmar"
-category: Exploring methods TBA TBA by Alejandra
+category: Alejandra Ascencio (Universidad de Los Andes) leads us through a research methods workshop at the intersections of quantitative statistics and specualative imagination (TBA)
 category_es: Exploración de métodos por confirmar, a cargo de Alejandra
 kind: workshop
-day: 2
-time: "12:00–17:00"
-slot: 12
-length: 5
-venue: "Meet: Manchester School of Architecture Entrance"
+day: 3
+time: "10:00–13:00"
+slot: 10
+length: 3
+venue: "Meet: Manchester School of Architecture"
 venue_es: "Punto de encuentro: entrada de la Manchester School of Architecture"
 map_url: "https://maps.app.goo.gl/aVfmfpHC2pK2RGnC6"
 session_organizer: "Alejandra"
