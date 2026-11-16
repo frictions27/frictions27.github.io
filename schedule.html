@@ -22,6 +22,7 @@ permalink: /schedule/
       <section class="calendar-day" aria-label="Day {{ day }}, {{ day_date }} 2027">
         <div class="day-header"><span>DAY</span><strong>0{{ day }}</strong><small>{{ day_date }}</small></div>
         <div class="day-events">
+          <div class="hour-lines" aria-hidden="true">{% for hour in (1..9) %}<span></span>{% endfor %}</div>
           {% for event in events %}
             {% if event.day == day %}
             {% assign event_start = event.slot | plus: 0 %}
