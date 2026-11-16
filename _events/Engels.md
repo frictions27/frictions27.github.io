@@ -1,6 +1,6 @@
 ---
-title: Walk: Engels in Manchester
-title_es: Walk: Engels en Manchester
+title: "Walk: Engels in Manchester"
+title_es: "Walk: Engels en Manchester"
 category: Collaborative Walk in Manchester and Salford led by Dr Fadi Shayya (University of Salford)
 category_es: Caminata colaborativa por Manchester y Salford dirigida por el Dr. Fadi Shayya (Universidad de Salford)
 kind: workshop
