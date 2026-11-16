@@ -74,7 +74,7 @@ permalink: /schedule/
               {% endfor %}
             {% endif %}
             {% if visible_length > 0 %}
-            <a class="event-card {{ event.kind }}{% unless has_overlap %} wide{% endunless %}" style="--slot: {{ calendar_slot }}; --length: {{ visible_length }}" href="{{ event.url | relative_url }}">
+            <a class="event-card {{ event.kind }}{% if has_overlap %} overlapping{% else %} wide{% endif %}" style="--slot: {{ calendar_slot }}; --length: {{ visible_length }}" href="{{ event.url | relative_url }}">
               <span>{{ event.time }}</span><small>{{ event.kind }}</small><strong>{{ event.title }}</strong><small>{{ event.category }}</small><span class="card-arrow" aria-hidden="true">↗</span>
             </a>
             {% endif %}
