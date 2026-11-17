@@ -9,3 +9,10 @@ We welcome submissions of artworks or audio-visual contributions of any kind tha
 
 Submissions will benefit from peer review, and sharp critical response.
 
+Priority will be given to submission where the author can attend a majority of events during the core days of the symposium Wednesday March 3 to Thursday March 4.
+
+Timeline:
+
+Call for papers closes December 23rd 2026. 
+Results will be communicated by December 31st 2026. 
+Submission of files (where applicable) are due for submission at least one week in advance of the symposium so that playback and screenings can be organized.
