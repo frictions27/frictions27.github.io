@@ -9,6 +9,8 @@ time: "17:00–19:00"
 slot: 17
 length: 2
 venue: "MMU SODA G.12 Cinema"
+venue_es: "Punto de encuentro: entrada de la Manchester School of Architecture"
+map_url: "https://maps.app.goo.gl/aovcnBeLV1DCNbKY9"
 session_organizer: "Sandeep B Menon"
 speakers: []
 participants: []
