@@ -1,5 +1,5 @@
 ---
-title: Common Dinner
+title: Drinks
 title_es: Cena comunitaria
 short_description: Collective Dinner for Participants
 short_description_es: Cena colectiva para participantes
