@@ -1,7 +1,7 @@
 ---
 title: "Seminar: the social study of science"
 title_es: Mesa redonda / conferencia
-category: Panels and Lectures
+category: Seminar
 category_es: Mesas redondas y conferencias
 kind: seminar
 day: 3
