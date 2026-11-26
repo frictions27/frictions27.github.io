@@ -5,7 +5,7 @@ short_description: Collective Dinner for Participants
 short_description_es: Cena colectiva para participantes
 kind: other
 day: 2
-time: "17:00–20:00"
+time: "After Hours"
 slot: 17
 length: 2
 venue: "Meet: TBA"
