@@ -1,5 +1,5 @@
 ---
-title: "Lecture and Seminar: the social study of science"
+title: "the social study of science"
 title_es: Mesa redonda / conferencia
 category: lecture
 category_es: Mesas redondas y conferencias
