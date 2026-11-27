@@ -1,9 +1,9 @@
 ---
-title: Panel (title tba)
+title: Round Table (title tba)
 title_es: Mesa redonda / conferencia 03
-category: panel
+category: round-table
 category_es: Mesas redondas y conferencias
-kind: panel
+kind: round-table
 day: 4
 time: "14:00–16:00"
 slot: 14
