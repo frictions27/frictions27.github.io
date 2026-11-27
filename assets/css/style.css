@@ -135,7 +135,7 @@ em { font-family: Georgia, serif; font-weight: 400; }
 .event-card.wide { grid-column: 1 / -1; }
 .event-card.workshop { background: #e2edce; border-color: var(--diffraction-green); }
 .event-card.seminar { background: #f6e2eb; border-color: var(--diffraction-pink); }
-.event-card.panel, .event-card.plenary { background: #f5dfdd; border-color: var(--diffraction-red); }
+.event-card.panel, .event-card.plenary, .event-card.round-table { background: #f5dfdd; border-color: var(--diffraction-red); }
 .event-card.lecture { background: #eee8ff; border-color: var(--diffraction-violet); }
 .event-card.exhibition { background: rgba(190, 190, 190, .35); border-color: var(--diffraction-green); }
 .event-card.dinner, .event-card.other, .event-card.lunch, .event-card.drinks { background: rgba(190, 190, 190, .35); }
