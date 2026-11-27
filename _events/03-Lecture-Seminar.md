@@ -5,9 +5,9 @@ category: lecture
 category_es: Mesas redondas y conferencias
 kind: lecture
 day: 3
-time: "11:00–13:00"
-slot: 11
-length: 2
+time: "12:00–13:00"
+slot: 12
+length: 1
 venue: ""
 session_organizer: "Dr Demetra Kourri"
 speakers: []
